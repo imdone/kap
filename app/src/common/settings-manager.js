@@ -50,7 +50,7 @@ async function init() {
   // We need to fetch a input device because if the user opens the app for the first time
   // and toggle the mic in the main window to record audio, we will not record any audio
   // if we do not have a input id stored.
-  // TODO: if no input device is available (could happen in an iMac, for example), we need
+  // TODO: if no input device is available (could happen in an iMac, for example), we need id:1 gh:2 ic:gh
   // to tell the user
   const devices = await aperture.audioDevices();
   if (devices.length > 0) {

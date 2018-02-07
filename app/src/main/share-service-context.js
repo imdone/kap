@@ -16,7 +16,7 @@ export default class ShareServiceContext {
     }));
   }
 
-  // TODO: Implement progress reporting
+  // TODO: Implement progress reporting id:9 gh:10 ic:gh
   async request(url, options) {
     const req = got(url, Object.assign({}, options, {useElectronNet: false}));
 

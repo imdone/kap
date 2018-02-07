@@ -85,7 +85,7 @@ ipcMain.on('show-options-menu', (event, coordinates) => {
 
 function closeCropperWindow() {
   cropperWindow.close();
-  mainWindow.setAlwaysOnTop(false); // TODO send a PR to `menubar`
+  mainWindow.setAlwaysOnTop(false); // TODO send a PR to `menubar` id:0 gh:1 ic:gh
   menubar.setOption('alwaysOnTop', false);
 }
 
@@ -105,7 +105,7 @@ const openCropperWindow = (size = {}, position = {}, options = {}) => {
   options = Object.assign({}, {
     closeOnBlur: true
   }, options);
-  mainWindow.setAlwaysOnTop(true, 'screen-saver', 1); // TODO send a PR to `menubar`
+  mainWindow.setAlwaysOnTop(true, 'screen-saver', 1); // TODO send a PR to `menubar` id:2 gh:3 ic:gh
   menubar.setOption('alwaysOnTop', true);
   if (cropperWindow) {
     cropperWindow.focus();
@@ -129,7 +129,7 @@ const openCropperWindow = (size = {}, position = {}, options = {}) => {
     });
     mainWindow.webContents.send('cropper-window-opened', {width, height, x, y});
     cropperWindow.loadURL(`file://${__dirname}/../renderer/views/cropper.html`);
-    cropperWindow.setIgnoreMouseEvents(false); // TODO this should be false by default
+    cropperWindow.setIgnoreMouseEvents(false); // TODO this should be false by default id:4 gh:5 ic:gh
     cropperWindow.setAlwaysOnTop(true, 'screen-saver');
     cropperWindow.setTouchBar(cropTouchbar);
 
@@ -158,7 +158,7 @@ const openCropperWindow = (size = {}, position = {}, options = {}) => {
     cropperWindow.on('moved', () => {
       let [x, y] = cropperWindow.getPosition();
 
-      // TODO: we need to implement some logic to, at the same time, allow the user
+      // TODO: we need to implement some logic to, at the same time, allow the user id:6 gh:7 ic:gh
       // to move the window to another display, but don't allow them to move the window
       // to ouside of a display. it should be tricky to implement – how can we decide if
       // a movement is valid – that is, the window is being moved to another display
@@ -649,7 +649,7 @@ const loadPlugins = async () => {
 const notify = text => {
   (new Notification({
     // The `title` is required for macOS 10.12
-    // TODO: Remove when macOS 10.13 is the target
+    // TODO: Remove when macOS 10.13 is the target id:5 gh:6 ic:gh
     title: app.getName(),
     body: text
   })).show();
