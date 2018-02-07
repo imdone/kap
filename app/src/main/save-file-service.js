@@ -38,7 +38,7 @@ const action = async context => {
     return;
   }
 
-  // TODO: Switch to the async version when we target Electron 1.8
+  // TODO: Switch to the async version when we target Electron 1.8 id:8 gh:9 ic:gh
   moveFile.sync(tempFilePath, filePath);
 
   const notification = new Notification({

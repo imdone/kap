@@ -6,7 +6,7 @@ function isVisible(el) {
   return !(classList.contains('invisible') || classList.contains('hidden'));
 }
 
-// TODO: Get rid of all usage of this so we can use `$` for jQuery
+// TODO: Get rid of all usage of this so we can use `$` for jQuery id:11 gh:12 ic:gh
 function $(selector) {
   return document.querySelector(selector);
 }

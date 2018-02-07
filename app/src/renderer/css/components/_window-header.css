@@ -63,7 +63,7 @@
   &.is-translucent::before {
     background: rgba(34, 34, 34, 0.2);
     box-shadow: none;
-    /* TODO: Add backdrop-filter back in when it doesn't make the window flash */
+    /* TODO: Add backdrop-filter back in when it doesn't make the window flash id:12 gh:13 ic:gh*/
     /* backdrop-filter: blur(10px); */
   }
 

@@ -71,7 +71,7 @@ const convertToGif = PCancelable.fn(async (onCancel, opts) => {
 });
 
 function convertToMp4(opts) {
-  // TODO: Instead of fixing the `file://` prefix here, just store it in a better place in the editor
+  // TODO: Instead of fixing the `file://` prefix here, just store it in a better place in the editor id:10 gh:11 ic:gh
   opts.progressCallback(0);
   return convert(opts.outputPath, opts, [
     '-i', opts.filePath,

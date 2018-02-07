@@ -22,7 +22,7 @@ export default async function (exportOptions) {
   const outputPath = path.join(tempy.directory(), exportOptions.defaultFileName);
 
   const convertProcess = convert({
-    filePath: exportOptions.filePath, // TODO: Rename `filePath` to `inputPath`
+    filePath: exportOptions.filePath, // TODO: Rename `filePath` to `inputPath` id:3 gh:4 ic:gh
     outputPath,
     width: exportOptions.width,
     height: exportOptions.height,
